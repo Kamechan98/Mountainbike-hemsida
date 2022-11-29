@@ -269,7 +269,7 @@ article{
         .team-nere{
             display: flex;
             flex-direction: column;
-            margin: 10px;
+            margin: 10px; 
         }
     }
 }
@@ -777,32 +777,30 @@ article{
             position: relative;
             right: 90px;
         }
-        }
-        
+    }
+    //Om oss 
+    .omoss-main .sektion1 {
+        @include flex(row, center, center);
+        margin-top: 20px;
+        padding-bottom: 30vh;
+        padding-top: 1rem;
+        .bild-fakta{
+            align-self: center;
+                    
+            }
+    }
+    .omoss-main .sektion2{
+        @include flex(column, center, center);
+    .team-uppe{
+        @include flex(row, center,center );
+    }
+    .team-nere{
+        display: flex;
+        flex-direction: row;
+    }
+    
        
     }
-
-//Om oss 
-.omoss-main .sektion1 {
-    @include flex(row, center, center);
-    margin-top: 20px;
-    padding-bottom: 30vh;
-    padding-top: 1rem;
-    .bild-fakta{
-        align-self: center;
-                
-        }
-}
-.omoss-main .sektion2{
-    @include flex(column, center, center);
-.team-uppe{
-    @include flex(row, center,center );
-}
-
-.team-nere{
-    display: flex;
-    flex-direction: row;
-}
 }
 
 
