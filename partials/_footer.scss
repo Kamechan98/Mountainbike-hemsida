@@ -1,0 +1,150 @@
+@mixin flex($direction, $justify, $align) {
+    display:flex;
+    flex-direction:$direction;
+    justify-content: $justify;
+    align-items: $align; 
+}
+$primary-color:#7FA883;
+$secondary-color:#097B45;
+$third-color:#8F8F8F;
+$white-text:#ffff;
+
+.footer-container {
+    background-color:$third-color;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    display: flex;
+
+}
+   
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:3rem;
+    text-align: center;
+}
+
+h2 {
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.media-logga {
+     margin: 20px;
+            
+}
+        
+.footer-bild {
+    width: 20%;
+}
+       
+.footer-bild1 {
+    width: 7%;
+}          
+.footer-logga {
+    margin-top: 20px;
+    @include flex(column, space-between, center);
+   .footer-logbild {
+        width: 30%;
+        height: 10%;
+    }
+    .footer-ul-links{
+        display: flex;
+        margin-left: 7rem;
+       }
+
+    a:link{
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    a:visited{
+        color: black;
+    }
+
+    li {
+        display: block;
+        list-style:none;
+        margin: 2rem;
+        }
+        
+
+    a:link{
+        text-decoration: none;
+        font-size: 1.5em;
+       }
+
+       a:visited{
+           color: black;
+       }
+
+        li {
+           list-style: none;
+           margin: 2rem;
+       }
+    }
+
+    @media only screen and (min-width: 577px) {
+    .footer-container {
+   
+        .wrapper{
+            height: 100%;
+            padding: 50px;
+            background-color:$third-color;
+            display: flex;
+            flex-direction: row;
+            font-size: 1.2rem;
+            justify-content: space-evenly;
+            color: $white-text;
+        }
+        .footer-text{
+            height: 50%;
+            background-color: $third-color;
+        h2{
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .footer-bild {
+            width: 50px;
+            margin-top: 10px;
+        }
+        
+        .footer-bild1 {
+            width: 20px;
+            margin-top: 5px;
+        }
+    }
+    }        
+    
+    .footer-logga{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+                
+             img {
+                width: 20%;
+                height: 50%;
+            }
+    
+            .footer-ul-links{
+                 display: flex;  
+            }
+    
+            a:link{
+                text-decoration: none;
+                font-size: 1.5em;
+            }
+    
+            a:visited{
+                color: black;
+            }
+    
+             li {
+                list-style: none;
+                margin: 2rem;
+            }
+    }
+    }

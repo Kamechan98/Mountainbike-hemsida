@@ -1,0 +1,809 @@
+@use "./partials/header";
+@use "./partials/footer";
+// @import"/partials/header";
+// @import"/partials/footer";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display:flex;
+    flex-direction:$direction;
+    justify-content: $justify;
+    align-items: $align; 
+}
+
+$primary-color:#7FA883;
+$secondary-color:#097B45;
+$third-color:#8F8F8F;
+$white-text:#ffff;
+// $black-text:#0000;
+
+//Startsida
+    
+        .Välkommen{
+            text-align: center;
+            font-size: medium;
+        }
+        .container {
+            position: relative;
+        // width: 2000px;
+        max-width: 100%;
+        
+        img {
+            display: block;
+            position: relative;
+            width: 100%;
+        // max-height: 100%;
+    }
+    .btn {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        padding: 15px;
+        border-radius: 12px;
+        border: none;
+        font-size: 2rem;
+        color: black;
+        text-decoration: none;
+        opacity: 0.5;
+        cursor: pointer;
+        flex-shrink: 2;
+        // width: 20%;
+    }
+    .btn:hover {
+        opacity: 1
+    }
+    }
+
+
+
+    article{
+        @include flex(column, space-between, center);
+        font-size: medium;
+        background-color: #7FA883;
+        color: #fff;
+        position: relative;
+        margin:30px;
+        height: 500px;
+        
+        .article-img{
+            height: 50%;
+            width: 100%;
+        }
+
+        p{
+            text-align: center;
+        }
+        button{
+            width: 50%;
+            height: 10%;
+            background-color: #097B45;
+            color: #fff;
+            border: none;
+            font-size: x-large;
+            margin-bottom: 5px;
+        }
+    
+    }
+
+      
+    .container {
+        position: relative;
+        max-width: 100%;
+        img {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+    .btn {
+        @include flex(row, center, center);
+        position: absolute;
+        // top: 65%;
+        // left: 50%;
+        padding: 15px;
+        border-radius: 12px;
+        border: none;
+        font-size: 2rem;
+        color: black;
+        text-decoration: none;
+        opacity: 0.5;
+        cursor: pointer;
+        // width: 15%;
+    }
+    .btn:hover {
+        opacity: 1
+    }
+
+}
+
+
+.välkommen{
+    h1 p {
+        align-items: center;
+    }
+}
+
+.articles{
+    @include flex(column, space-between, center);
+
+article{
+    @include flex(column, flex-start, center);
+    // flex-grow: 5;
+    font-size: medium;
+    background-color: #7fa883;
+    color: #fff;
+    position: relative;
+    width: 70%;
+    margin: 30px;
+    }
+    .article-img{
+        height: 100%;
+        width: 100%;
+    }
+    p{
+        text-align: center;
+    }
+    button{
+        width: 50%;
+        height: 5%;
+        background-color: #097B45;
+        color: #ffff;
+        border: none;
+        margin-top: 15px;
+    }
+
+}
+//OM OSS
+    .omoss-main{
+        font-family: 'Work Sans', sans-serif;
+    h1{
+        text-align: center;
+        padding-top: 20px;
+        color: $secondary-color;
+    }
+
+
+    .sektion1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        padding-bottom: 30vh;
+        padding-top: 1rem;
+
+    .text-om-oss{
+    margin: 20px;
+    font-size: medium;
+            
+    h2{
+    color: $secondary-color;
+            }
+        }
+
+        img{
+            height: 330px;
+            width: 450px;
+            position: relative;
+            top: 30px;
+            
+        }
+
+        .faktaruta {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 50px;
+            max-width: 380px;
+            font-size: medium;
+
+            ul li{
+                margin: 1rem;
+            }
+
+            
+        }
+
+    }
+
+    .sektion2{
+        background-color: $secondary-color;
+        @include flex(column, center, center);
+
+        h3{
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        p{
+            color: $white-text;
+        }
+
+        .personal-team{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid white;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            height:320px;
+            font-size: small;
+            text-align: center;
+
+            img{
+                height: 130px;
+                width: 80px;
+                border-radius: 100%;
+                align-self: center;
+                margin-bottom: 20px;
+            }
+
+            a{
+                color: $white-text;
+            }
+        }
+        
+
+        .team{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-uppe{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .team-nere{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+    }
+}
+
+//HYRA ELLER BOKA UTRUSTNING
+.bokahyr {
+    @include flex(column, center, center);
+    font-family: 'Work Sans', sans-serif;
+
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        color: $secondary-color;
+        }
+    
+    h2,.h3-grön {
+        color: $secondary-color;
+        }
+    
+    h3 {
+        font-size: 1rem;
+        }
+    
+    p {
+        font-size: 1rem;
+        }
+    
+    .utrustning {
+        @include flex(row, center, center);
+        margin-left: 5%;
+            
+    .utrustning.text {
+        padding: 0 24px 24px 24px;
+        margin: 48px 12px;
+          span{
+            color: red;
+            }
+        }
+
+    .cyklar {
+        display: inline-block;
+        width: 25%;
+        height: 15%;
+            .bild-cykel {
+                width: 100%;
+                }
+        }
+
+    .bokning {
+        padding: 0 24px 24px 24px;
+        // margin: 48px 12px;
+        margin-right: 5%;
+
+        .checkbox {
+            padding: 5px;
+            margin-bottom: 7px;
+        }
+    
+        .select-dropmeny {
+            border:1px solid black;
+            padding: 4px 4px 4px 0;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            width: 100%;
+            font-family: inherit;
+            font-size: inherit;
+            }
+                                 
+        label {
+            font-size: 0.85em;
+            }
+    
+        .textfält{
+            width: 100%;
+            padding: 6px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            }
+    
+                .btn{
+                    background: green;
+                    width: 100%;
+                    color: white;
+                    border: 0;
+                    padding: 12px 24px;
+                    text-align: center;
+                }
+    
+                .btn:hover{
+                    background: rgb(2, 161, 2);
+                    opacity: 1;
+                }
+        }
+    }
+    
+    
+}
+
+//BOKA KURSER
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.k-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            color: green;
+            }
+        
+        h2,.h3-grön {
+            color: green;
+            }
+        
+        h3 {
+            font-size: 1rem;
+            }
+        
+        p {
+            font-size: 1rem;
+            }
+}
+
+
+//Section 1
+
+.kursutbud {
+   // display: inline;
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   align-content: center;
+   margin-bottom: 20px;
+
+    .utbud {
+        display: block;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: medium;
+        background-color: #7fa883;
+        color: #fff;
+        position: relative;
+        padding: 2% 2% 5% 2%;
+        margin-left: 30px;
+        width: 20%;
+        height: 70%;
+      
+            img {
+                display: block;
+                position: relative;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        
+        .b-boka{
+            position: absolute;
+            align-content: center;
+            width: 50%;
+            height: 10%;
+            background-color: #097B45;
+            color: #fff;
+            border: none;
+            margin-left: 50px;
+            margin-top: 8px;
+            cursor: pointer;
+            text-decoration: none;
+
+            .b-boka:hover {
+                opacity: 1;
+            }
+        }
+    }
+ }
+
+
+ //Section 2
+
+ .pass {
+    // display: inline;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    margin-bottom: 20px;
+ 
+
+    .utbud {
+        display: block;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: medium;
+        background-color: #7fa883;
+        color: #fff;
+        position: relative;
+        padding: 2% 2% 5% 2%;;
+        margin-left: 30px;
+        width: 20%;
+        height: 70%;
+
+            img {
+                display: block;
+                position: relative;
+                max-width: 100%;
+                max-height: 100%;
+            }    
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            
+        .b-boka{
+            position: absolute;
+            align-content: center;
+            width: 50%;
+            height: 10%;
+            background-color: #097B45;
+            color: #fff;
+            border: none;
+            margin-left: 50px;
+            margin-top: 8px;
+            cursor: pointer;
+            text-decoration: none;
+
+            .b-boka:hover {
+                opacity: 1;
+                background-color: #7fa883;
+            }
+        }
+    }
+ }
+
+
+//Kontakt
+.kontaktsida {
+    // @include flex(row, center,center);
+    font-family: 'Work Sans', sans-serif;
+
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        color: $secondary-color;
+        
+    }
+    
+    h2,.h3-grön {
+        color: $secondary-color;
+        
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    p{
+        font-size: medium;
+    }
+    
+    .kontakt-info{
+    font-size: medium;
+     margin-left: 40px;
+     .kontakt-info-text {
+        font-size: medium;
+        padding: 0 24px 24px 24px;
+        margin: 48px 12px;
+          span{
+            color: red;
+          }
+       }
+    
+    
+    .formulär {
+        @include flex(column, center, center);
+        padding: 0 24px 24px 24px;
+        margin: 48px 12px;
+    
+        .select-dropmeny{
+            border:1px solid black;
+            padding: 4px 4px 4px 0;
+            margin-bottom: 20px;
+            width: 100%;
+            font-family: inherit;
+            font-size: inherit;
+            
+        }
+       
+        label {
+            font-size: 0.85em;
+            }
+    
+            .textfält{
+                width: 100%;
+                padding: 6px;
+                border: 1px solid black;
+                box-sizing: border-box;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                }
+    
+                .btn{
+                    background: $secondary-color;
+                    width: 100%;
+                    color: white;
+                    border: 0;
+                    padding: 12px 24px;
+                    text-align: center;
+                }
+    
+                .btn:hover{
+                    background: $secondary-color;
+                }
+    }
+    }
+    
+    .hitta-hit {
+        @include flex(column, space-evenly,center);
+        
+        .h3-grön{
+             font-size: 1.3rem;
+        }
+    
+        .kontors-bild{
+            position: relative;
+            left: 40px;
+            bottom: 0px;
+    
+            img {
+                align-self: center;
+                width: 490px;
+                height: 300px;
+                
+              }
+        }
+    
+            .hitta-hit-info{
+                padding: 0 24px 24px 24px;
+                margin: 48px 12px;
+                position: relative;
+                left: 30px;
+    
+                a{
+                    color: black;
+                  }
+              }
+    }
+}
+//Referenssida
+.referenser-main {
+
+    font-family: 'Work Sans', sans-serif;
+
+    h1{
+        text-align: center;
+        color: green;
+        padding-top:30px;
+
+    }
+    .rubrik-text{
+        text-align: center;
+    }
+
+    .reviews{
+        @include flex(column, center, center);
+        .reviews-box-container{
+            width: 300px;
+            flex-shrink: 5;
+            background-color: rgb(232, 231, 231);
+            margin: 70px 15px 20px 30px;
+            border:1px solid black;
+            padding: 20px;
+
+            .gäst-mail{
+                font-size: .7rem;
+            }
+
+            img{
+                height: 50px;
+                width: 90px;
+            }
+
+            p.review-text{
+                margin-top: 5px;
+                
+            }
+
+            .star-rating1 {
+
+              position: relative;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+            .star-rating2 {
+
+              position: relative;
+              left: 70px;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+            .star-rating3 {
+
+              position: relative;
+              left: 95px;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+            .star-rating4 {
+
+              position: relative;
+              left: 90px;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+            .star-rating5 {
+
+              position: relative;
+              left: 80px;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+            .star-rating6 {
+
+              position: relative;
+              left: 140px;
+              
+                .checked{
+                    color: orange;
+                   }
+            }
+        }
+
+    }
+
+    
+}
+
+@media only screen and (min-width: 768px) {
+//Startsida
+.articles{
+     @include flex(row, space-evenly, center);
+    }
+//Recensionsida
+    .referenser-main .reviews{
+        @include flex(row, center, center);
+        .reviews-box-container{
+            width: 400px;
+            background-color: rgb(232, 231, 231);
+            margin: 70px 15px 20px 30px;
+            border:1px solid black;
+            padding: 20px;
+        }
+
+}
+//Kontakt
+    .kontaktsida {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Work Sans', sans-serif;
+
+        
+        .kontakt-info{
+            @include flex(row, space-between, center);
+            margin-left: 40px;
+            .kontakt-info-text {
+                font-size: medium;
+                position: relative;
+                bottom: 150px;
+               }       
+        }
+         .hitta-hit {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            right: 90px;
+        }
+        }
+        
+       
+    }
+
+//Om oss 
+.omoss-main .sektion1 {
+    @include flex(row, center, center);
+    margin-top: 20px;
+    padding-bottom: 30vh;
+    padding-top: 1rem;
+    .bild-fakta{
+        align-self: center;
+                
+        }
+}
+.omoss-main .sektion2{
+    @include flex(column, center, center);
+.team-uppe{
+    @include flex(row, center,center );
+}
+
+.team-nere{
+    display: flex;
+    flex-direction: row;
+}
+}
+
+
+
