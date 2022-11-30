@@ -327,6 +327,7 @@ article .info-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   padding-bottom: 30vh;
   padding-top: 1rem;
@@ -1015,7 +1016,7 @@ article .info-btn {
     position: relative;
     right: 90px;
   }
-  .kontaktsida .omoss-main .sektion1 {
+  .omoss-main .sektion1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1024,22 +1025,22 @@ article .info-btn {
     padding-bottom: 30vh;
     padding-top: 1rem;
   }
-  .kontaktsida .omoss-main .sektion1 .bild-fakta {
+  .omoss-main .sektion1 .bild-fakta {
     align-self: center;
   }
-  .kontaktsida .omoss-main .sektion2 {
+  .omoss-main .sektion2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .kontaktsida .omoss-main .sektion2 .team-uppe {
+  .omoss-main .sektion2 .team-uppe {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .kontaktsida .omoss-main .sektion2 .team-nere {
+  .omoss-main .sektion2 .team-nere {
     display: flex;
     flex-direction: row;
   }

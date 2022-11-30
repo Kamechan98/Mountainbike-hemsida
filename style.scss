@@ -128,9 +128,7 @@ $font-link: Red Hat Text, sans-serif;
 
 
     .sektion1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex(column, center, center);
         margin-top: 20px;
         padding-bottom: 30vh;
         padding-top: 1rem;
@@ -913,7 +911,8 @@ $font-link: Red Hat Text, sans-serif;
             right: 90px;
         }
     }
-    //Om oss 
+}
+// Om oss 
     .omoss-main .sektion1 {
         @include flex(row, center, center);
         margin-top: 20px;
@@ -921,9 +920,11 @@ $font-link: Red Hat Text, sans-serif;
         padding-top: 1rem;
         .bild-fakta{
             align-self: center;
-                    
-            }
     }
+}
+                    
+            
+    
     .omoss-main .sektion2{
         @include flex(column, center, center);
     .team-uppe{
@@ -937,6 +938,6 @@ $font-link: Red Hat Text, sans-serif;
        
     }
 }
-}
+
 
 
