@@ -1,27 +1,44 @@
 @charset "UTF-8";
 .header {
-  display: block;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.header li {
-  list-style: none;
-}
-.header a {
-  text-decoration: none;
+  border-bottom: 1px solid #E2E8F0;
 }
 .header .navbar {
-  display: block;
-  position: relative;
-  z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 1;
 }
-.header .bar {
+.header .navbar li {
+  list-style: none;
+}
+.header .navbar a {
+  text-decoration: none;
+  position: relative;
+}
+.header .navbar a:hover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #097B45;
+  transition: 0.5s;
+  margin: auto;
+  align-items: center;
+}
+.header .navbar a:after {
+  left: 0;
+  bottom: -5px;
+}
+.header .navbar img {
+  height: 100px;
+  width: 460px;
+}
+.header .navbar .hamburger {
+  display: none;
+}
+.header .navbar .bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -29,54 +46,25 @@
   transition: all 0.3s ease-in-out;
   background-color: #101010;
 }
-.header .nav-item {
-  margin-left: 7rem;
-}
-.header a:visited {
-  color: black;
-}
-.header .nav-link {
-  font-size: 1.6rem;
-  font-weight: 400;
-  text-decoration: none;
-}
-.header .nav-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-.header .nav-logo {
-  position: relative;
-  height: 40%;
-  width: 60%;
-  left: 10rem;
-}
-.header nav {
+.header .navbar .nav-menu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-.header nav #myLinks {
-  display: none;
-  position: relative;
-  left: 250px;
-  bottom: 55px;
-  padding: 100%;
-  background-color: #04AA6D;
+.header .navbar .nav-item {
+  margin-left: 5rem;
 }
-.header nav a {
+.header .navbar .nav-link {
+  font-size: 2rem;
+  font-weight: 400;
   color: black;
-  padding: 4px;
-  text-decoration: none;
-  font-size: 10px;
-  display: block;
+  font-family: Red Hat Text, sans-serif;
 }
-.header .active {
-  background-color: #04AA6D;
+.header .navbar .nav-link:hover {
+  color: #097B45;
 }
-
-@media screen and (max-width: 576px) {
-  .nav-menu {
+@media only screen and (max-width: 768px) {
+  .header .navbar .nav-menu {
     position: fixed;
     left: -100%;
     top: 12rem;
@@ -88,86 +76,31 @@
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
-  .nav-menu .nav-logo {
-    height: 60%;
-    width: 70%;
+  .header .navbar .nav-menu.active {
+    left: 0;
+  }
+  .header .navbar img {
+    height: 100px;
+    width: 300px;
+  }
+  .header .navbar .nav-item {
+    margin: 2.5rem 0;
+  }
+  .header .navbar .hamburger {
+    display: block;
+    cursor: pointer;
   }
 }
-
-.nav-menu.active {
-  left: 0;
-}
-
-.nav-item {
-  margin: 2.5rem 0;
-}
-
-.hamburger {
-  display: none;
-}
-
-.nav-menu.active {
-  left: 0;
-}
-
-.nav-item {
-  margin: 2.5rem 0;
-}
-
-.hamburger {
-  display: inline;
-  cursor: pointer;
-  margin-right: 4em;
-}
-
-.hamburger.active .bar:nth-child(2) {
+.header .navbar .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
-
-.hamburger.active .bar:nth-child(1) {
+.header .navbar .hamburger.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
-.hamburger.active .bar:nth-child(3) {
+.header .navbar .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.nav-logo {
-  height: 60%;
-  width: 70%;
-  margin-right: 85px;
-}
-
-.style-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (min-width: 577px) {
-  .nav-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .header .hamburger {
-    display: none;
-  }
-  .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px;
-  }
-  .style-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 .footer-container {
   background-color: #8F8F8F;
   margin-left: auto;
@@ -213,13 +146,9 @@ h2 {
   width: 30%;
   height: 10%;
 }
-.footer-logga .footer-ul-links {
-  display: flex;
-  margin-left: 7rem;
-}
 .footer-logga a:link {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .footer-logga a:visited {
   color: black;
@@ -242,6 +171,9 @@ h2 {
 }
 
 @media only screen and (min-width: 577px) {
+  .footer-container {
+    margin-top: 20px;
+  }
   .footer-container .wrapper {
     height: 100%;
     padding: 50px;
@@ -307,61 +239,11 @@ html {
   text-align: center;
   font-size: medium;
 }
-
-.container {
-  position: relative;
-  max-width: 100%;
+.Välkommen h1 {
+  font-family: Vazirmatn, sans-serif;
 }
-.container img {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-.container .btn {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  padding: 15px;
-  border-radius: 12px;
-  border: none;
-  font-size: 2rem;
-  color: black;
-  text-decoration: none;
-  opacity: 0.5;
-  cursor: pointer;
-  flex-shrink: 2;
-}
-.container .btn:hover {
-  opacity: 1;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-size: medium;
-  background-color: #7FA883;
-  color: #fff;
-  position: relative;
-  margin: 30px;
-  height: 500px;
-}
-article .article-img {
-  height: 50%;
-  width: 100%;
-}
-article p {
-  text-align: center;
-}
-article button {
-  width: 50%;
-  height: 10%;
-  background-color: #097B45;
-  color: #fff;
-  border: none;
-  font-size: x-large;
-  margin-bottom: 5px;
+.Välkommen p {
+  font-family: Inter, sans-serif;
 }
 
 .container {
@@ -379,6 +261,9 @@ article button {
   justify-content: center;
   align-items: center;
   position: absolute;
+  background: #fff;
+  top: 35px;
+  left: 150px;
   padding: 15px;
   border-radius: 12px;
   border: none;
@@ -392,51 +277,51 @@ article button {
   opacity: 1;
 }
 
-.välkommen h1 p {
-  align-items: center;
+.btn:hover {
+  opacity: 1;
 }
 
-.articles {
+article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-.articles article {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: medium;
-  background-color: #7fa883;
+  font-size: small;
+  background-color: #7FA883;
   color: #fff;
   position: relative;
-  width: 70%;
   margin: 30px;
+  height: 500px;
 }
-.articles .article-img {
-  height: 100%;
+article .article-img {
+  height: 50%;
   width: 100%;
 }
-.articles p {
-  text-align: center;
+article h2 {
+  font-family: Vazirmatn, sans-serif;
 }
-.articles button {
-  width: 50%;
-  height: 5%;
+article p {
+  text-align: center;
+  font-family: Inter, sans-serif;
+}
+article .info-btn {
+  width: 250px;
   background-color: #097B45;
   color: white;
   border: none;
-  margin-top: 15px;
+  margin: 15px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.2rem;
 }
 
-.omoss-main {
-  font-family: "Work Sans", sans-serif;
-}
 .omoss-main h1 {
+  font-size: x-large;
   text-align: center;
   padding-top: 20px;
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
 }
 .omoss-main .sektion1 {
   display: flex;
@@ -451,41 +336,60 @@ article button {
   font-size: medium;
 }
 .omoss-main .sektion1 .text-om-oss h2 {
+  font-size: 2rem;
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
+}
+.omoss-main .sektion1 .text-om-oss h3 {
+  font-family: Vazirmatn, sans-serif;
+}
+.omoss-main .sektion1 .text-om-oss p {
+  font-family: Inter, sans-serif;
+}
+.omoss-main .sektion1 .text-om-oss b {
+  font-family: Vazirmatn, sans-serif;
 }
 .omoss-main .sektion1 img {
   height: 330px;
   width: 450px;
   position: relative;
   top: 30px;
+  left: 15px;
 }
 .omoss-main .sektion1 .faktaruta {
+  position: relative;
+  left: 15px;
   background-color: #fff;
+  border: 2px dotted black;
   padding: 20px;
   margin-top: 50px;
   max-width: 380px;
   font-size: medium;
+  font-family: Inter, sans-serif;
 }
 .omoss-main .sektion1 .faktaruta ul li {
   margin: 1rem;
 }
-.omoss-main .sektion2 {
+
+.sektion2 {
   background-color: #097B45;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.omoss-main .sektion2 h3 {
+.sektion2 h3 {
   text-align: center;
   padding: 20px;
   color: white;
   font-size: 1.5rem;
+  font-family: Vazirmatn, sans-serif;
 }
-.omoss-main .sektion2 p {
+.sektion2 p {
   color: white;
+  font-family: Inter, sans-serif;
 }
-.omoss-main .sektion2 .personal-team {
+.sektion2 .personal-team {
   display: flex;
   flex-direction: column;
   border: 1px solid white;
@@ -496,27 +400,27 @@ article button {
   font-size: small;
   text-align: center;
 }
-.omoss-main .sektion2 .personal-team img {
-  height: 130px;
+.sektion2 .personal-team img {
   width: 80px;
   border-radius: 100%;
   align-self: center;
   margin-bottom: 20px;
 }
-.omoss-main .sektion2 .personal-team a {
+.sektion2 .personal-team a {
   color: white;
+  font-family: Red Hat Text, sans-serif;
 }
-.omoss-main .sektion2 .team {
+.sektion2 .team {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.omoss-main .sektion2 .team-uppe {
+.sektion2 .team-uppe {
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
-.omoss-main .sektion2 .team-nere {
+.sektion2 .team-nere {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -530,19 +434,26 @@ article button {
   font-family: "Work Sans", sans-serif;
 }
 .bokahyr h1 {
+  font-size: x-large;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 60px;
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
 }
 .bokahyr h2, .bokahyr .h3-grön {
+  font-size: 2rem;
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
 }
 .bokahyr h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: Vazirmatn, sans-serif;
+  margin-top: 10px;
 }
 .bokahyr p {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  font-family: Inter, sans-serif;
 }
 .bokahyr .utrustning {
   display: flex;
@@ -560,8 +471,13 @@ article button {
 }
 .bokahyr .utrustning .cyklar {
   display: inline-block;
+  position: relative;
+  left: 100px;
   width: 25%;
   height: 15%;
+}
+.bokahyr .utrustning .cyklar p {
+  text-align: center;
 }
 .bokahyr .utrustning .cyklar .bild-cykel {
   width: 100%;
@@ -574,6 +490,9 @@ article button {
 .bokahyr .utrustning .bokning .checkbox {
   padding: 5px;
   margin-bottom: 7px;
+}
+.bokahyr .utrustning .bokning .checkbox p {
+  width: 340px;
 }
 .bokahyr .utrustning .bokning .select-dropmeny {
   border: 1px solid black;
@@ -620,24 +539,28 @@ article button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Work Sans", sans-serif;
 }
 .k-info h1 {
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   color: green;
-  font-size: large;
+  font-size: x-large;
+  font-family: Vazirmatn, sans-serif;
 }
 .k-info h2, .k-info .h3-grön {
   color: green;
-  font-size: medium;
+  font-size: x-large;
+  font-family: Vazirmatn, sans-serif;
 }
 .k-info h3 {
   font-size: medium;
+  font-family: Vazirmatn, sans-serif;
 }
 .k-info p {
   font-size: medium;
+  font-family: Inter, sans-serif;
+  text-align: center;
 }
 
 .kursutbud {
@@ -674,14 +597,15 @@ article button {
 }
 .kursutbud .utbud .b-boka {
   position: absolute;
+  left: 90px;
+  bottom: 10px;
   align-content: center;
   width: 50%;
   height: 10%;
   background-color: #097B45;
   color: #fff;
   border: none;
-  margin-left: 50px;
-  margin-top: 8px;
+  font-size: large;
   cursor: pointer;
   text-decoration: none;
 }
@@ -723,14 +647,15 @@ article button {
 }
 .pass .utbud .b-boka {
   position: absolute;
+  left: 90px;
+  bottom: 10px;
   align-content: center;
   width: 50%;
   height: 10%;
   background-color: #097B45;
   color: #fff;
   border: none;
-  margin-left: 50px;
-  margin-top: 8px;
+  font-size: large;
   cursor: pointer;
   text-decoration: none;
 }
@@ -739,23 +664,26 @@ article button {
   background-color: #7fa883;
 }
 
-.kontaktsida {
-  font-family: "Work Sans", sans-serif;
-}
 .kontaktsida h1 {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 60px;
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
+  font-size: x-large;
 }
 .kontaktsida h2, .kontaktsida .h3-grön {
   color: #097B45;
+  font-family: Vazirmatn, sans-serif;
+  font-size: 2rem;
 }
 .kontaktsida h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: Vazirmatn, sans-serif;
 }
 .kontaktsida p {
   font-size: medium;
+  font-family: Inter, sans-serif;
 }
 .kontaktsida .kontakt-info {
   font-size: medium;
@@ -787,6 +715,7 @@ article button {
 }
 .kontaktsida .kontakt-info .formulär label {
   font-size: 0.85em;
+  font-family: Inter, sans-serif;
 }
 .kontaktsida .kontakt-info .formulär .textfält {
   width: 100%;
@@ -814,11 +743,15 @@ article button {
   align-items: center;
 }
 .kontaktsida .hitta-hit .h3-grön {
-  font-size: 1.3rem;
+  font-size: 2rem;
+}
+.kontaktsida .hitta-hit h4 {
+  font-size: 1.5rem;
+  font-family: Vazirmatn, sans-serif;
 }
 .kontaktsida .hitta-hit .kontors-bild {
   position: relative;
-  left: 40px;
+  left: 0px;
   bottom: 0px;
 }
 .kontaktsida .hitta-hit .kontors-bild img {
@@ -837,15 +770,20 @@ article button {
 }
 
 .referenser-main {
-  font-family: "Work Sans", sans-serif;
+  background-color: #097B45;
 }
 .referenser-main h1 {
   text-align: center;
-  color: green;
+  color: #fff;
   padding-top: 30px;
+  font-family: Vazirmatn, sans-serif;
+  font-size: x-large;
 }
 .referenser-main .rubrik-text {
+  color: #fff;
   text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: medium;
 }
 .referenser-main .reviews {
   display: flex;
@@ -854,8 +792,13 @@ article button {
   align-items: center;
 }
 .referenser-main .reviews .reviews-box-container {
-  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
   flex-shrink: 5;
+  font-size: x-small;
   background-color: rgb(232, 231, 231);
   margin: 70px 15px 20px 30px;
   border: 1px solid black;
@@ -870,9 +813,11 @@ article button {
 }
 .referenser-main .reviews .reviews-box-container p.review-text {
   margin-top: 5px;
+  font-family: Inter, sans-serif;
 }
 .referenser-main .reviews .reviews-box-container .star-rating1 {
   position: relative;
+  left: 30px;
 }
 .referenser-main .reviews .reviews-box-container .star-rating1 .checked {
   color: orange;
@@ -886,7 +831,7 @@ article button {
 }
 .referenser-main .reviews .reviews-box-container .star-rating3 {
   position: relative;
-  left: 95px;
+  left: 80px;
 }
 .referenser-main .reviews .reviews-box-container .star-rating3 .checked {
   color: orange;
@@ -907,18 +852,58 @@ article button {
 }
 .referenser-main .reviews .reviews-box-container .star-rating6 {
   position: relative;
-  left: 140px;
+  left: 110px;
 }
 .referenser-main .reviews .reviews-box-container .star-rating6 .checked {
   color: orange;
 }
 
 @media only screen and (min-width: 768px) {
+  .container .btn {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 2rem;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    opacity: 0.5;
+    cursor: pointer;
+    flex-shrink: 2;
+    width: 15%;
+  }
+  .container .btn .btn:hover {
+    opacity: 1;
+  }
   .articles {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 10px;
+  }
+  .articles article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: medium;
+    background-color: #7fa883;
+    color: #fff;
+    position: relative;
+    width: 70%;
+    margin: 30px;
+    padding-bottom: 3%;
+  }
+  .articles .article-img {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .articles .info-btn {
+    margin-top: 20px;
   }
   .referenser-main .reviews {
     display: flex;
@@ -929,27 +914,46 @@ article button {
   .referenser-main .reviews .reviews-box-container {
     width: 400px;
     background-color: rgb(232, 231, 231);
-    margin: 70px 15px 20px 30px;
+    margin: 30px;
     border: 1px solid black;
-    padding: 20px;
   }
   .bokahyr {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Work Sans", sans-serif;
+    font-family: Inter, sans-serif;
   }
   .bokahyr .utrustning {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .bokahyr .utrustning .text {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 5%;
   }
+  .bokahyr .utrustning .cyklar {
+    position: relative;
+    left: -30px;
+  }
+  .bokahyr .utrustning .bokning {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    width: 400px;
+  }
   .main {
     display: flex;
     flex-direction: column;
+  }
+  .main .utbud {
+    width: 350px;
+    height: 600px;
   }
   .k-info {
     display: flex;
@@ -965,12 +969,22 @@ article button {
     align-items: center;
     margin-bottom: 20px;
   }
+  .kursutbud .utbud .b-boka {
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
+  }
   .pass {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+  }
+  .pass .utbud .b-boka {
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
   }
   .kontaktsida {
     display: flex;
@@ -989,15 +1003,19 @@ article button {
   .kontaktsida .kontakt-info .kontakt-info-text {
     font-size: medium;
     position: relative;
-    bottom: 150px;
+    bottom: 110px;
   }
-  .kontaktsida .hitta-hit {
+  .kontaktsida .kontakt-info .Kontakt-formulär {
+    position: relative;
+    left: 50px;
+  }
+  .kontaktsida .kontakt-info .hitta-hit {
     display: flex;
     flex-direction: row;
     position: relative;
     right: 90px;
   }
-  .omoss-main .sektion1 {
+  .kontaktsida .omoss-main .sektion1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1006,22 +1024,22 @@ article button {
     padding-bottom: 30vh;
     padding-top: 1rem;
   }
-  .omoss-main .sektion1 .bild-fakta {
+  .kontaktsida .omoss-main .sektion1 .bild-fakta {
     align-self: center;
   }
-  .omoss-main .sektion2 {
+  .kontaktsida .omoss-main .sektion2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .omoss-main .sektion2 .team-uppe {
+  .kontaktsida .omoss-main .sektion2 .team-uppe {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  .omoss-main .sektion2 .team-nere {
+  .kontaktsida .omoss-main .sektion2 .team-nere {
     display: flex;
     flex-direction: row;
   }

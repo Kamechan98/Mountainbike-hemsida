@@ -27,17 +27,25 @@ $secondary-color:#097B45;
 $third-color:#8F8F8F;
 $white-text:#ffff;
 // $black-text:#0000;
+$font-brod:Inter, sans-serif;
+$font-rubrik:Vazirmatn, sans-serif;
+$font-link: Red Hat Text, sans-serif; 
 
 //Startsida
     
         .Välkommen{
             text-align: center;
             font-size: medium;
+            h1{
+                font-family: $font-rubrik;
+            }
+            p{
+            font-family: $font-brod;
+        }
         }
         .container {
             position: relative;
-        // width: 2000px;
-        max-width: 100%;
+            max-width: 100%;
         
         img {
             display: block;
@@ -46,70 +54,11 @@ $white-text:#ffff;
         // max-height: 100%;
     }
     .btn {
-        position: absolute;
-        top: 45%;
-        left: 45%;
-        padding: 15px;
-        border-radius: 12px;
-        border: none;
-        font-size: 2rem;
-        color: black;
-        text-decoration: none;
-        opacity: 0.5;
-        cursor: pointer;
-        flex-shrink: 2;
-        // width: 20%;
-    }
-    .btn:hover {
-        opacity: 1
-    }
-    }
-
-
-
-    article{
-        @include flex(column, space-between, center);
-        font-size: medium;
-        background-color: #7FA883;
-        color: #fff;
-        position: relative;
-        margin:30px;
-        height: 500px;
-        
-        .article-img{
-            height: 50%;
-            width: 100%;
-        }
-
-        p{
-            text-align: center;
-        }
-        button{
-            width: 50%;
-            height: 10%;
-            background-color: #097B45;
-            color: #fff;
-            border: none;
-            font-size: x-large;
-            margin-bottom: 5px;
-        }
-    
-    }
-
-      
-    .container {
-        position: relative;
-        max-width: 100%;
-        img {
-            display: block;
-            position: relative;
-            width: 100%;
-        }
-    .btn {
         @include flex(row, center, center);
         position: absolute;
-        // top: 65%;
-        // left: 50%;
+        background: #fff;
+        top: 35px;
+        left: 150px;
         padding: 15px;
         border-radius: 12px;
         border: none;
@@ -119,57 +68,62 @@ $white-text:#ffff;
         opacity: 0.5;
         cursor: pointer;
         // width: 15%;
+            }
+        .btn:hover {
+            opacity: 1
+        }
+    
     }
     .btn:hover {
         opacity: 1
     }
 
-}
 
+    article{
+        @include flex(column, space-between, center);
+        font-size: small;
+        background-color:$primary-color;
+        color: #fff;
+        position: relative;
+        margin:30px;
+        height: 500px;
 
-.välkommen{
-    h1 p {
-        align-items: center;
-    }
-}
+        
+        .article-img{
+            height: 50%;
+            width: 100%;
+        }
+        h2{
+            font-family: $font-rubrik;
+        }
 
-.articles{
-    @include flex(column, space-between, center);
-
-article{
-    @include flex(column, flex-start, center);
-    // flex-grow: 5;
-    font-size: medium;
-    background-color: #7fa883;
-    color: #fff;
-    position: relative;
-    width: 70%;
-    margin: 30px;
+        p{
+            text-align: center;
+            font-family: $font-brod;
+        }
+        .info-btn{
+            width: 250px;
+            // height: 100px;
+            background-color: #097B45;
+            color: #ffff;
+            border: none;
+            margin: 15px;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+    
     }
-    .article-img{
-        height: 100%;
-        width: 100%;
-    }
-    p{
-        text-align: center;
-    }
-    button{
-        width: 50%;
-        height: 5%;
-        background-color: #097B45;
-        color: #ffff;
-        border: none;
-        margin-top: 15px;
-    }
-
-}
+    
 //OM OSS
     .omoss-main{
-        font-family: 'Work Sans', sans-serif;
     h1{
+        font-size: x-large;
         text-align: center;
         padding-top: 20px;
         color: $secondary-color;
+        font-family: $font-rubrik;
     }
 
 
@@ -186,8 +140,19 @@ article{
     font-size: medium;
             
     h2{
+    font-size: 2rem;
     color: $secondary-color;
+    font-family: $font-rubrik;
             }
+    h3{
+        font-family: $font-rubrik;
+    }
+    p{
+        font-family: $font-brod;
+    }
+    b{
+        font-family: $font-rubrik;
+    }
         }
 
         img{
@@ -195,18 +160,22 @@ article{
             width: 450px;
             position: relative;
             top: 30px;
+            left: 15px;
             
         }
-
         .faktaruta {
+            position: relative;
+            left: 15px;
             background-color: #fff;
+            border: 2px dotted black;
             padding: 20px;
             margin-top: 50px;
             max-width: 380px;
             font-size: medium;
-
+            font-family: $font-brod;
             ul li{
-                margin: 1rem;
+            margin: 1rem;
+            }
             }
 
             
@@ -223,10 +192,12 @@ article{
             padding: 20px;
             color: white;
             font-size: 1.5rem;
+            font-family: $font-rubrik;
         }
 
         p{
             color: $white-text;
+            font-family: $font-brod;
         }
 
         .personal-team{
@@ -241,7 +212,7 @@ article{
             text-align: center;
 
             img{
-                height: 130px;
+                // height: 130px;
                 width: 80px;
                 border-radius: 100%;
                 align-self: center;
@@ -250,6 +221,7 @@ article{
 
             a{
                 color: $white-text;
+                font-family: $font-link;
             }
         }
         
@@ -272,7 +244,7 @@ article{
             margin: 10px; 
         }
     }
-}
+
 
 //HYRA ELLER BOKA UTRUSTNING
 .bokahyr {
@@ -280,22 +252,29 @@ article{
     font-family: 'Work Sans', sans-serif;
 
     h1 {
+        font-size: x-large;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 60px;
         color: $secondary-color;
+        font-family: $font-rubrik;
         }
     
     h2,.h3-grön {
+        font-size: 2rem;
         color: $secondary-color;
+        font-family: $font-rubrik;
         }
     
     h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-family: $font-rubrik;
+        margin-top: 10px;
         }
     
     p {
-        font-size: 1rem;
+        font-size: 1.4rem;
+        font-family: $font-brod;
         }
     
     .utrustning {
@@ -312,8 +291,13 @@ article{
 
     .cyklar {
         display: inline-block;
+        position: relative;
+        left: 100px;
         width: 25%;
         height: 15%;
+        p {
+            text-align: center;
+        }
             .bild-cykel {
                 width: 100%;
                 }
@@ -327,6 +311,9 @@ article{
         .checkbox {
             padding: 5px;
             margin-bottom: 7px;
+            p{
+                width: 340px;
+            }
         }
     
         .select-dropmeny {
@@ -378,27 +365,32 @@ article{
 
 .k-info {
     @include flex(column, center, center);
-    font-family: 'Work Sans', sans-serif;
+    
     
         h1 {
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             color: green;
-            font-size: large;
+            font-size: x-large;
+            font-family: $font-rubrik;
             }
         
         h2,.h3-grön {
             color: green;
-            font-size: medium;
+            font-size: x-large;
+            font-family:$font-rubrik;
             }
         
         h3 {
             font-size: medium;
+            font-family:$font-rubrik;
             }
         
         p {
             font-size: medium;
+            font-family: $font-brod;
+            text-align: center;
             }
 }
 
@@ -437,14 +429,17 @@ article{
         
         .b-boka{
             position: absolute;
+            left: 90px;
+            bottom: 10px;
             align-content: center;
             width: 50%;
             height: 10%;
             background-color: #097B45;
             color: #fff;
             border: none;
-            margin-left: 50px;
-            margin-top: 8px;
+            font-size: large;
+            // margin-left: 50px;
+            // margin-top: 8px;
             cursor: pointer;
             text-decoration: none;
 
@@ -492,14 +487,17 @@ article{
             
         .b-boka{
             position: absolute;
+            left: 90px;
+            bottom: 10px;
             align-content: center;
             width: 50%;
             height: 10%;
             background-color: #097B45;
             color: #fff;
             border: none;
-            margin-left: 50px;
-            margin-top: 8px;
+            font-size: large;
+            // margin-left: 50px;
+            // margin-top: 8px;
             cursor: pointer;
             text-decoration: none;
 
@@ -514,28 +512,32 @@ article{
 
 //Kontakt
 .kontaktsida {
-    // @include flex(row, center,center);
-    font-family: 'Work Sans', sans-serif;
 
     h1 {
         text-align: center;
         margin-top: 40px;
         margin-bottom: 60px;
         color: $secondary-color;
+        font-family: $font-rubrik;
+        font-size: x-large
         
     }
     
     h2,.h3-grön {
         color: $secondary-color;
+        font-family: $font-rubrik;
+        font-size: 2rem;
         
     }
     
     h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-family: $font-rubrik;
     }
     
     p{
         font-size: medium;
+        font-family: $font-brod;
     }
     
     .kontakt-info{
@@ -568,6 +570,7 @@ article{
        
         label {
             font-size: 0.85em;
+            font-family: $font-brod;
             }
     
             .textfält{
@@ -598,12 +601,16 @@ article{
         @include flex(column, space-evenly,center);
         
         .h3-grön{
-             font-size: 1.3rem;
+             font-size: 2rem;
+        }
+        h4{
+            font-size: 1.5rem;
+            font-family: $font-rubrik;
         }
     
         .kontors-bild{
             position: relative;
-            left: 40px;
+            left: 0px;
             bottom: 0px;
     
             img {
@@ -627,26 +634,33 @@ article{
     }
 }
 //Referenssida
-.referenser-main {
 
-    font-family: 'Work Sans', sans-serif;
+.referenser-main {
+    background-color: #097B45;
 
     h1{
         text-align: center;
-        color: green;
+        color: #fff;
         padding-top:30px;
+        font-family: $font-rubrik;
+        font-size: x-large;
 
     }
     .rubrik-text{
+        color: #fff;
         text-align: center;
+        font-family: $font-brod;
+        font-size: medium;
     }
 
     .reviews{
         @include flex(column, center, center);
         .reviews-box-container{
-            width: 300px;
+            @include flex(row, flex-start, center);
+            width: 400px;
             flex-shrink: 5;
-            background-color: rgb(232, 231, 231);
+            font-size: x-small;
+            background-color:rgb(232, 231, 231);
             margin: 70px 15px 20px 30px;
             border:1px solid black;
             padding: 20px;
@@ -662,12 +676,14 @@ article{
 
             p.review-text{
                 margin-top: 5px;
+                font-family: $font-brod;
                 
             }
 
             .star-rating1 {
-
               position: relative;
+              left: 30px;
+              
               
                 .checked{
                     color: orange;
@@ -685,7 +701,7 @@ article{
             .star-rating3 {
 
               position: relative;
-              left: 95px;
+              left: 80px;
               
                 .checked{
                     color: orange;
@@ -712,7 +728,7 @@ article{
             .star-rating6 {
 
               position: relative;
-              left: 140px;
+              left: 110px;
               
                 .checked{
                     color: orange;
@@ -727,8 +743,49 @@ article{
 
 @media only screen and (min-width: 768px) {
 //Startsida
+.container .btn {
+        position: absolute;
+        top: 100px;
+        left: 500px;
+        padding: 15px;
+        border-radius: 12px;
+        border: none;
+        font-size: 2rem;
+        background-color: #fff;
+        color: black;
+        text-decoration: none;
+        opacity: 0.5;
+        cursor: pointer;
+        flex-shrink: 2;
+        width: 15%;
+
+    .btn:hover {
+    opacity: 1
+}
+    }
+
 .articles{
      @include flex(row, space-evenly, center);
+     padding-bottom: 10px;
+     article{
+        @include flex(column, flex-start, center);
+        // flex-grow: 5;
+        font-size: medium;
+        background-color: #7fa883;
+        color: #fff;
+        position: relative;
+        width: 70%;
+        margin: 30px;
+        padding-bottom: 3%;
+        }
+    .article-img{
+        // height: 100%;
+        width: 100%;
+        margin-bottom: 5px;
+        }
+    .info-btn{
+            margin-top: 20px;
+        } 
     }
 //Recensionsida
     .referenser-main .reviews{
@@ -736,29 +793,56 @@ article{
         .reviews-box-container{
             width: 400px;
             background-color: rgb(232, 231, 231);
-            margin: 70px 15px 20px 30px;
+            margin: 30px;
             border:1px solid black;
-            padding: 20px;
+            // padding: 20px;
         }
 
 }
 
-//BOKA OCH HYR
+//Utrustning
+
+
+
 .bokahyr {
     @include flex(column, center, center);
-    font-family: 'Work Sans', sans-serif;
+    font-family: $font-brod;
 
     .utrustning {
-        @include flex(row, center, center);
+        @include flex(row,space-evenly,center);
+    
+    .text{
+        // display: inline;
+        @include flex(column, center, center);
         margin-left: 5%;
-
+        // width: 500px;    
     }   
+    .cyklar{
+        position: relative;
+        left: -30px;
+    }
+    
+    .bokning{
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    width: 400px;
 }
+
+}
+
+}
+//KURSER
 .main {
     display: flex;
     flex-direction: column;
+
+.utbud{
+    width: 350px;
+    height: 600px;
 }
 
+}
 .k-info {
     display: flex;
     flex-direction: column;
@@ -774,9 +858,15 @@ article{
    // display: inline;
    @include flex(row, center, center);
    margin-bottom: 20px;
+}
+   .kursutbud .utbud .b-boka{
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
+   }
 
     
- }
+ 
 
 
  //Section 2
@@ -786,6 +876,13 @@ article{
     @include flex(row, center, center);
     margin-bottom: 20px;
  }
+
+ .pass .utbud .b-boka{
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
+   }
+
 
 //Kontakt
     .kontaktsida {
@@ -802,9 +899,13 @@ article{
             .kontakt-info-text {
                 font-size: medium;
                 position: relative;
-                bottom: 150px;
-               }       
-        }
+                bottom: 110px;
+               }
+               .Kontakt-formulär {
+                position: relative;
+                left: 50px;
+               }
+        
          .hitta-hit {
             display: flex;
             flex-direction: row;
@@ -836,6 +937,6 @@ article{
        
     }
 }
-
+}
 
 
