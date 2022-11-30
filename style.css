@@ -546,7 +546,7 @@ article button {
 }
 .bokahyr .utrustning {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 5%;
@@ -568,6 +568,7 @@ article button {
 }
 .bokahyr .utrustning .bokning {
   padding: 0 24px 24px 24px;
+  margin: 48px 12px;
   margin-right: 5%;
 }
 .bokahyr .utrustning .bokning .checkbox {
@@ -610,6 +611,8 @@ article button {
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .k-info {
@@ -624,22 +627,25 @@ article button {
   margin-top: 40px;
   margin-bottom: 60px;
   color: green;
+  font-size: large;
 }
 .k-info h2, .k-info .h3-grön {
   color: green;
+  font-size: medium;
 }
 .k-info h3 {
-  font-size: 1rem;
+  font-size: medium;
 }
 .k-info p {
-  font-size: 1rem;
+  font-size: medium;
 }
 
 .kursutbud {
+  display: inline;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: row;
-  align-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .kursutbud .utbud {
@@ -653,8 +659,6 @@ article button {
   position: relative;
   padding: 2% 2% 5% 2%;
   margin-left: 30px;
-  width: 20%;
-  height: 70%;
 }
 .kursutbud .utbud img {
   display: block;
@@ -686,10 +690,11 @@ article button {
 }
 
 .pass {
+  display: inline;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: row;
-  align-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .pass .utbud {
@@ -703,8 +708,6 @@ article button {
   position: relative;
   padding: 2% 2% 5% 2%;
   margin-left: 30px;
-  width: 20%;
-  height: 70%;
 }
 .pass .utbud img {
   display: block;
@@ -929,6 +932,45 @@ article button {
     margin: 70px 15px 20px 30px;
     border: 1px solid black;
     padding: 20px;
+  }
+  .bokahyr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+  }
+  .bokahyr .utrustning {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .k-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+  }
+  .kursutbud {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .pass {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
   .kontaktsida {
     display: flex;
