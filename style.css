@@ -1023,7 +1023,7 @@ article .info-btn {
     align-items: center;
     position: relative;
   }
-  .kontaktsida .omoss-main .sektion1 {
+  .omoss-main .sektion1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1032,7 +1032,7 @@ article .info-btn {
     padding-bottom: 30vh;
     padding-top: 1rem;
   }
-  .kontaktsida .omoss-main .sektion1 .bild-fakta {
+  .omoss-main .sektion1 .bild-fakta {
     align-self: center;
   }
   .omoss-main .sektion2 {

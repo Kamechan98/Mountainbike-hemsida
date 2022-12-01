@@ -914,7 +914,7 @@ $font-link: Red Hat Text, sans-serif;
             // right: 90px;
         }
     
-
+} 
 // Om oss 
     .omoss-main .sektion1 {
         @include flex(row, center, center);
@@ -926,7 +926,7 @@ $font-link: Red Hat Text, sans-serif;
     }
 }
                     
-}            
+           
     
     .omoss-main .sektion2{
         @include flex(column, center, center);
