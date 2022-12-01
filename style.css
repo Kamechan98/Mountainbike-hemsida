@@ -396,6 +396,8 @@ article .info-btn {
 .sektion2 .personal-team {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid white;
   margin: 20px;
   padding: 20px;
@@ -418,15 +420,20 @@ article .info-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .sektion2 .team-uppe {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
 .sektion2 .team-nere {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
 
@@ -577,8 +584,9 @@ article .info-btn {
 }
 .kursutbud .utbud {
   display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: column-reverse;
   align-items: center;
   font-size: medium;
   background-color: #7fa883;
@@ -629,8 +637,9 @@ article .info-btn {
 }
 .pass .utbud {
   display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: column-reverse;
   align-items: center;
   font-size: medium;
   background-color: #7fa883;
@@ -805,7 +814,6 @@ article .info-btn {
   justify-content: flex-start;
   align-items: center;
   width: 400px;
-  flex-shrink: 5;
   font-size: x-small;
   background-color: rgb(232, 231, 231);
   margin: 70px 15px 20px 30px;
@@ -968,7 +976,6 @@ article .info-btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Work Sans", sans-serif;
   }
   .kursutbud {
     display: flex;

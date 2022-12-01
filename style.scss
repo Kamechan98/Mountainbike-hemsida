@@ -1,8 +1,5 @@
 @use "./partials/header";
 @use "./partials/footer";
-// @import"/partials/header";
-// @import"/partials/footer";
-
 
 * {
     margin: 0;
@@ -102,7 +99,6 @@ $font-link: Red Hat Text, sans-serif;
         }
         .info-btn{
             width: 250px;
-            // height: 100px;
             background-color: #097B45;
             color: #ffff;
             border: none;
@@ -170,13 +166,13 @@ $font-link: Red Hat Text, sans-serif;
             max-width: 380px;
             font-size: medium;
             font-family: $font-brod;
-            ul li{
+        ul li{
             margin: 1rem;
             }
-            }
+        }
 
             
-        }
+    }
 
     }
 
@@ -198,8 +194,7 @@ $font-link: Red Hat Text, sans-serif;
         }
 
         .personal-team{
-            display: flex;
-            flex-direction: column;
+            @include flex(column, center, center);
             border: 1px solid white;
             margin: 20px;
             padding: 20px;
@@ -209,7 +204,6 @@ $font-link: Red Hat Text, sans-serif;
             text-align: center;
 
             img{
-                // height: 130px;
                 width: 80px;
                 border-radius: 100%;
                 align-self: center;
@@ -224,20 +218,16 @@ $font-link: Red Hat Text, sans-serif;
         
 
         .team{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex(column, center, center);
         }
 
         .team-uppe{
-            display: flex;
-            flex-direction: column;
+            @include flex(column, center, center);
             margin: 10px;
         }
 
         .team-nere{
-            display: flex;
-            flex-direction: column;
+            @include flex(column, center, center);
             margin: 10px; 
         }
     }
@@ -401,9 +391,7 @@ $font-link: Red Hat Text, sans-serif;
 
     .utbud {
         display: block;
-        justify-content: center;
-        flex-direction: column-reverse;
-        align-items: center;
+        @include flex(column, center, center);
         font-size: medium;
         background-color: #7fa883;
         color: #fff;
@@ -459,17 +447,13 @@ $font-link: Red Hat Text, sans-serif;
 
     .utbud {
         display: block;
-        justify-content: center;
-        flex-direction: column-reverse;
-        align-items: center;
+        @include flex(column, center, center);
         font-size: medium;
         background-color: #7fa883;
         color: #fff;
         position: relative;
         padding: 2% 2% 5% 2%;;
         margin-left: 30px;
-        // width: 20%;
-        // height: 70%;
 
             img {
                 display: block;
@@ -497,8 +481,6 @@ $font-link: Red Hat Text, sans-serif;
             color: #fff;
             border: none;
             font-size: large;
-            // margin-left: 50px;
-            // margin-top: 8px;
             cursor: pointer;
             text-decoration: none;
 
@@ -635,7 +617,6 @@ $font-link: Red Hat Text, sans-serif;
     }
 }
 //Referenssida
-
 .referenser-main {
     background-color: #097B45;
 
@@ -659,7 +640,6 @@ $font-link: Red Hat Text, sans-serif;
         .reviews-box-container{
             @include flex(row, flex-start, center);
             width: 400px;
-            flex-shrink: 5;
             font-size: x-small;
             background-color:rgb(232, 231, 231);
             margin: 70px 15px 20px 30px;
@@ -757,7 +737,6 @@ $font-link: Red Hat Text, sans-serif;
         text-decoration: none;
         opacity: 0.5;
         cursor: pointer;
-        // flex-shrink: 2;
         width: 15%;
 
     .btn:hover {
@@ -770,7 +749,6 @@ $font-link: Red Hat Text, sans-serif;
      padding-bottom: 10px;
      article{
         @include flex(column, flex-start, center);
-        // flex-grow: 5;
         font-size: medium;
         background-color: #7fa883;
         color: #fff;
@@ -780,7 +758,6 @@ $font-link: Red Hat Text, sans-serif;
         padding-bottom: 3%;
         }
     .article-img{
-        // height: 100%;
         width: 100%;
         margin-bottom: 5px;
         }
@@ -802,9 +779,6 @@ $font-link: Red Hat Text, sans-serif;
 }
 
 //Utrustning
-
-
-
 .bokahyr {
     @include flex(column, center, center);
     font-family: $font-brod;
@@ -813,10 +787,8 @@ $font-link: Red Hat Text, sans-serif;
         @include flex(row,space-evenly,center);
     
     .text{
-        // display: inline;
         @include flex(column, center, center);
-        margin-left: 5%;
-        // width: 500px;    
+        margin-left: 5%;   
     }   
     .cyklar{
         position: relative;
@@ -849,14 +821,12 @@ $font-link: Red Hat Text, sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Work Sans', sans-serif;
 }
 
 
 //Section 1
 
 .kursutbud {
-   // display: inline;
    @include flex(row, center, center);
    margin-bottom: 20px;
 }
@@ -866,14 +836,9 @@ $font-link: Red Hat Text, sans-serif;
     bottom: 10px;
    }
 
-    
- 
-
-
  //Section 2
 
  .pass {
-    // display: inline;
     @include flex(row, center, center);
     margin-bottom: 20px;
  }
@@ -888,11 +853,6 @@ $font-link: Red Hat Text, sans-serif;
 //Kontakt
     .kontaktsida {
         @include flex(column, center, center);
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-
         
         .kontakt-info{
             @include flex(row, space-between, center);
@@ -911,7 +871,6 @@ $font-link: Red Hat Text, sans-serif;
         .hitta-hit {
             @include flex(row, center, center);
             position: relative;
-            // right: 90px;
         }
     
 } 
@@ -926,20 +885,13 @@ $font-link: Red Hat Text, sans-serif;
     }
 }
                     
-           
-    
     .omoss-main .sektion2{
         @include flex(column, center, center);
     .team-uppe{
-        @include flex(row, center,center );
+        @include flex(row, center,center);
     }
     .team-nere{
-        @include flex(row, center,center ); 
+        @include flex(row, center,center); 
     }
-    
-       
     }
 }
-
-
-
