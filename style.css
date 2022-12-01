@@ -234,7 +234,6 @@ h2 {
 
 html {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
 }
 
 .Välkommen {
@@ -385,7 +384,7 @@ article .info-btn {
 .sektion2 h3 {
   text-align: center;
   padding: 20px;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   font-family: Vazirmatn, sans-serif;
 }
@@ -398,7 +397,7 @@ article .info-btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid #fff;
   margin: 20px;
   padding: 20px;
   width: 300px;
@@ -526,15 +525,15 @@ article .info-btn {
   margin-bottom: 15px;
 }
 .bokahyr .utrustning .bokning .btn {
-  background: green;
+  background: #097B45;
   width: 100%;
-  color: white;
+  color: #fff;
   border: 0;
   padding: 12px 24px;
   text-align: center;
 }
 .bokahyr .utrustning .bokning .btn:hover {
-  background: rgb(2, 161, 2);
+  background: #097B45;
   opacity: 1;
 }
 
@@ -555,12 +554,12 @@ article .info-btn {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 20px;
-  color: green;
+  color: #7FA883;
   font-size: x-large;
   font-family: Vazirmatn, sans-serif;
 }
 .k-info h2, .k-info .h3-grön {
-  color: green;
+  color: #097B45;
   font-size: x-large;
   font-family: Vazirmatn, sans-serif;
 }
@@ -589,7 +588,7 @@ article .info-btn {
   justify-content: center;
   align-items: center;
   font-size: medium;
-  background-color: #7fa883;
+  background-color: #7FA883;
   color: #fff;
   position: relative;
   padding: 2% 2% 5% 2%;
@@ -642,7 +641,7 @@ article .info-btn {
   justify-content: center;
   align-items: center;
   font-size: medium;
-  background-color: #7fa883;
+  background-color: #7FA883;
   color: #fff;
   position: relative;
   padding: 2% 2% 5% 2%;
@@ -678,7 +677,7 @@ article .info-btn {
 }
 .pass .utbud .b-boka .b-boka:hover {
   opacity: 1;
-  background-color: #7fa883;
+  background-color: #7FA883;
 }
 
 .kontaktsida h1 {
@@ -745,7 +744,7 @@ article .info-btn {
 .kontaktsida .kontakt-info .formulär .btn {
   background: #097B45;
   width: 100%;
-  color: white;
+  color: #fff;
   border: 0;
   padding: 12px 24px;
   text-align: center;
@@ -906,7 +905,7 @@ article .info-btn {
     justify-content: flex-start;
     align-items: center;
     font-size: medium;
-    background-color: #7fa883;
+    background-color: #7FA883;
     color: #fff;
     position: relative;
     width: 70%;

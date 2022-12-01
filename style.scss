@@ -9,7 +9,6 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
 }
 
 @mixin flex($direction, $justify, $align) {
@@ -99,7 +98,7 @@ $font-link: Red Hat Text, sans-serif;
         }
         .info-btn{
             width: 250px;
-            background-color: #097B45;
+            background-color: $secondary-color;
             color: #ffff;
             border: none;
             margin: 15px;
@@ -183,7 +182,7 @@ $font-link: Red Hat Text, sans-serif;
         h3{
             text-align: center;
             padding: 20px;
-            color: white;
+            color:#fff;
             font-size: 1.5rem;
             font-family: $font-rubrik;
         }
@@ -195,7 +194,7 @@ $font-link: Red Hat Text, sans-serif;
 
         .personal-team{
             @include flex(column, center, center);
-            border: 1px solid white;
+            border: 1px solid #fff;
             margin: 20px;
             padding: 20px;
             width: 300px;
@@ -327,16 +326,16 @@ $font-link: Red Hat Text, sans-serif;
             }
     
                 .btn{
-                    background: green;
+                    background: $secondary-color;
                     width: 100%;
-                    color: white;
+                    color: #fff;
                     border: 0;
                     padding: 12px 24px;
                     text-align: center;
                 }
     
                 .btn:hover{
-                    background: rgb(2, 161, 2);
+                    background: $secondary-color;
                     opacity: 1;
                 }
         }
@@ -358,13 +357,13 @@ $font-link: Red Hat Text, sans-serif;
             text-align: center;
             margin-top: 40px;
             margin-bottom: 20px;
-            color: green;
+            color: $primary-color;
             font-size: x-large;
             font-family: $font-rubrik;
             }
         
         h2,.h3-grön {
-            color: green;
+            color: $secondary-color;
             font-size: x-large;
             font-family:$font-rubrik;
             }
@@ -393,7 +392,7 @@ $font-link: Red Hat Text, sans-serif;
         display: block;
         @include flex(column, center, center);
         font-size: medium;
-        background-color: #7fa883;
+        background-color: $primary-color;
         color: #fff;
         position: relative;
         padding: 2% 2% 5% 2%;
@@ -421,12 +420,10 @@ $font-link: Red Hat Text, sans-serif;
             align-content: center;
             width: 150px;
             height: 50px;
-            background-color: #097B45;
+            background-color: $secondary-color;
             color: #fff;
             border: none;
             font-size: large;
-            // margin-left: 50px;
-            // margin-top: 8px;
             cursor: pointer;
             text-decoration: none;
 
@@ -449,7 +446,7 @@ $font-link: Red Hat Text, sans-serif;
         display: block;
         @include flex(column, center, center);
         font-size: medium;
-        background-color: #7fa883;
+        background-color: $primary-color;
         color: #fff;
         position: relative;
         padding: 2% 2% 5% 2%;;
@@ -477,7 +474,7 @@ $font-link: Red Hat Text, sans-serif;
             align-content: center;
             width: 150px;
             height: 50px;
-            background-color: #097B45;
+            background-color: $secondary-color;
             color: #fff;
             border: none;
             font-size: large;
@@ -486,7 +483,7 @@ $font-link: Red Hat Text, sans-serif;
 
             .b-boka:hover {
                 opacity: 1;
-                background-color: #7fa883;
+                background-color: $primary-color;
             }
         }
     }
@@ -568,7 +565,7 @@ $font-link: Red Hat Text, sans-serif;
                 .btn{
                     background: $secondary-color;
                     width: 100%;
-                    color: white;
+                    color: #fff;
                     border: 0;
                     padding: 12px 24px;
                     text-align: center;
@@ -618,7 +615,7 @@ $font-link: Red Hat Text, sans-serif;
 }
 //Referenssida
 .referenser-main {
-    background-color: #097B45;
+    background-color: $secondary-color;
 
     h1{
         text-align: center;
@@ -750,7 +747,7 @@ $font-link: Red Hat Text, sans-serif;
      article{
         @include flex(column, flex-start, center);
         font-size: medium;
-        background-color: #7fa883;
+        background-color: $primary-color;
         color: #fff;
         position: relative;
         width: 70%;
