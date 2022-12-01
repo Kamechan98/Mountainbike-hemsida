@@ -22,7 +22,6 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  border-bottom: 2px solid #097B45;
   transition: 0.5s;
   margin: auto;
   align-items: center;
@@ -31,7 +30,7 @@
   left: 0;
   bottom: -5px;
 }
-.header .navbar img {
+.header .navbar a img {
   height: 100px;
   width: 460px;
 }
@@ -263,7 +262,7 @@ html {
   position: absolute;
   background: #fff;
   top: 35px;
-  left: 150px;
+  left: 180px;
   padding: 15px;
   border-radius: 12px;
   border: none;
@@ -272,6 +271,7 @@ html {
   text-decoration: none;
   opacity: 0.5;
   cursor: pointer;
+  width: 160px;
 }
 .container .btn:hover {
   opacity: 1;
@@ -598,11 +598,13 @@ article .info-btn {
 }
 .kursutbud .utbud .b-boka {
   position: absolute;
-  left: 90px;
+  left: 130px;
   bottom: 10px;
+  text-align: center;
+  padding: 10px;
   align-content: center;
-  width: 50%;
-  height: 10%;
+  width: 150px;
+  height: 50px;
   background-color: #097B45;
   color: #fff;
   border: none;
@@ -648,11 +650,13 @@ article .info-btn {
 }
 .pass .utbud .b-boka {
   position: absolute;
-  left: 90px;
+  left: 130px;
   bottom: 10px;
+  text-align: center;
+  padding: 10px;
   align-content: center;
-  width: 50%;
-  height: 10%;
+  width: 150px;
+  height: 50px;
   background-color: #097B45;
   color: #fff;
   border: none;
@@ -863,7 +867,7 @@ article .info-btn {
   .container .btn {
     position: absolute;
     top: 100px;
-    left: 500px;
+    left: 650px;
     padding: 15px;
     border-radius: 12px;
     border: none;
@@ -873,7 +877,6 @@ article .info-btn {
     text-decoration: none;
     opacity: 0.5;
     cursor: pointer;
-    flex-shrink: 2;
     width: 15%;
   }
   .container .btn .btn:hover {
@@ -972,7 +975,7 @@ article .info-btn {
   }
   .kursutbud .utbud .b-boka {
     position: absolute;
-    left: 80px;
+    left: 100px;
     bottom: 10px;
   }
   .pass {
@@ -984,7 +987,7 @@ article .info-btn {
   }
   .pass .utbud .b-boka {
     position: absolute;
-    left: 80px;
+    left: 100px;
     bottom: 10px;
   }
   .kontaktsida {
