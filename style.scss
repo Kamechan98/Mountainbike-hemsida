@@ -794,9 +794,9 @@ $font-link: Red Hat Text, sans-serif;
         .reviews-box-container{
             width: 400px;
             background-color: rgb(232, 231, 231);
-            margin: 30px;
+            margin: 20px;
             border:1px solid black;
-            // padding: 20px;
+            padding: 20px;
         }
 
 }
@@ -887,11 +887,11 @@ $font-link: Red Hat Text, sans-serif;
 
 //Kontakt
     .kontaktsida {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Work Sans', sans-serif;
+        @include flex(column, center, center);
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
 
         
         .kontakt-info{
@@ -906,15 +906,15 @@ $font-link: Red Hat Text, sans-serif;
                 position: relative;
                 left: 50px;
                }
+            }
         
-         .hitta-hit {
-            display: flex;
-            flex-direction: row;
+        .hitta-hit {
+            @include flex(row, center, center);
             position: relative;
-            right: 90px;
+            // right: 90px;
         }
-    }
-}
+    
+
 // Om oss 
     .omoss-main .sektion1 {
         @include flex(row, center, center);
@@ -926,7 +926,7 @@ $font-link: Red Hat Text, sans-serif;
     }
 }
                     
-            
+}            
     
     .omoss-main .sektion2{
         @include flex(column, center, center);
@@ -934,8 +934,7 @@ $font-link: Red Hat Text, sans-serif;
         @include flex(row, center,center );
     }
     .team-nere{
-        display: flex;
-        flex-direction: row;
+        @include flex(row, center,center ); 
     }
     
        

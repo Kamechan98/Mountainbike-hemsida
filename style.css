@@ -169,7 +169,10 @@ h2 {
   margin: 2rem;
 }
 
-@media only screen and (min-width: 577px) {
+@media only screen and (min-width: 768px) {
+  footer {
+    width: 100%;
+  }
   .footer-container {
     margin-top: 20px;
   }
@@ -918,8 +921,9 @@ article .info-btn {
   .referenser-main .reviews .reviews-box-container {
     width: 400px;
     background-color: rgb(232, 231, 231);
-    margin: 30px;
+    margin: 20px;
     border: 1px solid black;
+    padding: 20px;
   }
   .bokahyr {
     display: flex;
@@ -995,7 +999,6 @@ article .info-btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Work Sans", sans-serif;
   }
   .kontaktsida .kontakt-info {
     display: flex;
@@ -1013,13 +1016,14 @@ article .info-btn {
     position: relative;
     left: 50px;
   }
-  .kontaktsida .kontakt-info .hitta-hit {
+  .kontaktsida .hitta-hit {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    right: 90px;
   }
-  .omoss-main .sektion1 {
+  .kontaktsida .omoss-main .sektion1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1028,7 +1032,7 @@ article .info-btn {
     padding-bottom: 30vh;
     padding-top: 1rem;
   }
-  .omoss-main .sektion1 .bild-fakta {
+  .kontaktsida .omoss-main .sektion1 .bild-fakta {
     align-self: center;
   }
   .omoss-main .sektion2 {
@@ -1046,5 +1050,7 @@ article .info-btn {
   .omoss-main .sektion2 .team-nere {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
